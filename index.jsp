@@ -18,7 +18,7 @@
   <body>
   <div align="center">
   	<a
-	  href="list.jsp" style="text-decoration:none;font-size:33px">查询用户信息列表
+      href="${pageContext.request.contextPath}/FindAllServlet" class="btn btn-primary">查询用户信息列表
 	</a>
   </div>
   </body>
