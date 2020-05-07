@@ -19,10 +19,10 @@
 <div class="container">
     <div class="container">
         <h3 style="text-align: center;">修改用户</h3>
-        <form action="" method="post">
+        <form action="${pageContext.request.contextPath}/UpdateServlet" method="post">
             <div class="form-group">
                 <label for="name">编号：</label>
-                <input type="text" class="form-control" id="id" readonly="readonly" name="id">
+                <input type="text" class="form-control" id="id" readonly="readonly" name="id" value="${user.id}">
             </div>
 
             <div class="form-group">
@@ -32,8 +32,8 @@
 
             <div class="form-group">
                 <label>性别：</label>
-                <input type="radio" name="sex" value="男"/>男
-                <input type="radio" name="sex" value="女"/>女
+                <input type="radio" name="sex" value="男" <c:if test="${user.sex=='男'}">checked="checked"</c:if>>/>男
+                <input type="radio" name="sex" value="女" <c:if test="${user.sex=='女'}">checked="checked"</c:if>>/>女
             </div>
 
             <div class="form-group">
